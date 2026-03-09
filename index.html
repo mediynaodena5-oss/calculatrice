@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculatrice</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/icon/font/css/all.css">
+<script src="js/calcul.js" defer></script>
+</head>
+
+<body>
+
+<div class="ecran">
+  <div class="calcul" id="calcul">
+
+    <div class="enhaut">
+      <button class="boutons" onclick="historicite()"><i class="fa-solid fa-history"></i></button>
+      <button class="boutons" onclick="theme()" id="boutonTheme"><i class="fa-solid fa-moon"></i></button>
+    </div>
+
+    <div class="operations" id="operations"></div>
+    <div class="historique" id="historique"></div>
+    <input type="text" id="ecran" class="avant" value="0" disabled>
+
+    <div class="clavier">
+      <button onclick="clearScreen()" style="color: rgb(255, 166, 0); font-weight: bold; "><h2>C</h2></button>
+      <button class="operateur" onclick="append('%')"><i class="fa-solid fa-percent"></i></button>
+      <button onclick="deleteLast()"><i class="fa-solid fa-delete-left"></i></button>
+      <button class="operateur" onclick="append('/')"><i class="fa-solid fa-divide"></i></button>
+
+      <button onclick="append('7')"><i class="fa-solid fa-7"></i></button>
+      <button onclick="append('8')"><i class="fa-solid fa-8"></i></button>
+      <button onclick="append('9')"><i class="fa-solid fa-9"></i></button>
+      <button class="operateur" onclick="append('*')"><i class="fa-solid fa-times"></i></button>
+
+      <button onclick="append('4')"><i class="fa-solid fa-4"></i></button>
+      <button onclick="append('5')"><i class="fa-solid fa-5"></i></button>
+      <button onclick="append('6')"><i class="fa-solid fa-6"></i></button>
+      <button class="operateur" onclick="append('-')"><i class="fa-solid fa-minus"></i></button>
+
+      <button onclick="append('1')"><i class="fa-solid fa-1"></i></button>
+      <button onclick="append('2')"><i class="fa-solid fa-2"></i></button>
+      <button onclick="append('3')"><i class="fa-solid fa-3"></i></button>
+      <button class="operateur" onclick="append('+')"><i class="fa-solid fa-plus"></i></button>
+
+      <button class="zero" onclick="append('0')"><i class="fa-solid fa-0"></i></button>
+      <button onclick="append('.')"><i class="fa-solid fa-circle " style="font-size: 8px;"></i></button>
+      <button class="egal" onclick="calculate()"><i class="fa-solid fa-equals"></i></button>
+    </div>
+
+    <div class="kalkilavan" id="avan"></div>
+
+  </div>
+
+</div>
+</body>
+</html>
